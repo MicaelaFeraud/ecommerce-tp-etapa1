@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mica Store | Categoría: Accesorios</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-protect="true">
+  
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.svg" alt="Logo" width="28" height="28"/>
+      <strong>Mica Store</strong>
+      
+    </a>
+    <nav class="nav">
+      <a href="index.html" class="">Home</a> <a href="category-electronica.html" class="">Electrónica</a> <a href="category-accesorios.html" class="active">Accesorios</a> <a href="category-hogar.html" class="">Hogar & Deco</a> <button id="logoutBtn" class="btn outline">Logout</button>
+    </nav>
+  </div>
+</header>
+<script src="js/auth.js"></script>
+<script>
+  (function(){ 
+    const here = location.pathname.split('/').pop();
+    document.querySelectorAll('.nav a').forEach(a => {
+      if (a.getAttribute('href') === here) a.classList.add('active');
+    });
+  })();
+</script>
+
+  <main class="main">
+    <div class="container">
+      
+    <section class="hero">
+      <h1 class="auth-title">Mica Store – Accesorios</h1>
+      <p class="auth-sub">Productos de <strong>Accesorios</strong> (contenido de ejemplo).</p>
+      <div class="grid">
+          <div class="card"><strong>Audífonos De Orejitas De Gato Led RGB Bluetooth</strong>
+            <img src="assets/images/Accesorio 1.png" alt="headphones" class="product-img">
+            <p class="helper">Audífonos Inalámbricos con diseño de Orejas de Gatos para Niñas.</p>
+            <a class="btn link">Ver más</a>
+          </div>
+          <div class="card"><strong>Jbl Go 3: Portable Speaker With Bluetooth</strong>
+            <img src="assets/images/accesorio 2.jpg" alt="Speaker" class="product-img">
+            <p class="helper">Redefini la elegancia y la potencia con el Celular Oppo A60 6.7" 256GB+8GB negro Un celular que combina diseño impecable y tecnología avanzada para que vivas cada momento al máximo.</p>
+            <a class="btn link">Ver más</a>
+          </div>
+          <div class="card"><strong>Galaxy Watch5 Bluetooth (44mm)</strong>
+            <img src="assets/images/accesorio 3.png" alt="smartwatch" class="product-img">
+            <p class="helper"> Resistente al agua, con una pantalla frontal más resistente hecha de cristal de zafiro de primera calidad que es 1,6.</p>
+            <a class="btn link">Ver más</a>
+          </div>
+        </div>
+    </section>
+    
+    </div>
+  </main>
+  <footer>
+    <div class="container">© Mica Store • Hecho para TP (Etapa 1)</div>
+  </footer>
+</body>
+</html>

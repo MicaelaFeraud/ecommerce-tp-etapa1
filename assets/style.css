@@ -1,0 +1,366 @@
+/* =========================
+   Variables
+   ========================= */
+:root {
+  --primary: #D97FAF;
+  --primary-rgb: 217, 127, 175;
+  --text: #222;
+  --muted: #6b7280;
+  --bg: #f3c9db;
+  /* Color de fondo unificado */
+  --card: #fff;
+  --border: #e8e6ea;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.05);
+  --focus: 0 0 0 4px rgba(var(--primary-rgb), .25);
+}
+
+/* =========================
+   Reset básico
+   ========================= */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* =========================
+   Layout base (footer abajo)
+   ========================= */
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Helvetica, Arial;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+
+  display: flex;
+  /* pega el footer abajo */
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.main {
+  /* ocupa el alto disponible */
+  flex: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+/* =========================
+   Componentes base
+   ========================= */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform .05s ease, box-shadow .2s ease, opacity .2s ease;
+  box-shadow: 0 8px 18px rgba(var(--primary-rgb), .25);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn.outline {
+  background: #fff;
+  color: var(--primary);
+}
+
+.btn.link {
+  background: transparent !important;
+  border: 0 !important;
+  color: var(--primary);
+  padding: 0 !important;
+  box-shadow: none !important;
+  text-decoration: none;
+  display: inline-block;
+  width: auto;
+  cursor: pointer;
+  transition: text-decoration 0.2s ease;
+  text-align-last: right;
+}
+
+.btn.link:hover {
+  text-decoration: underline;
+}
+
+
+.input,
+.select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  outline: none;
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+
+.input:focus,
+.select:focus {
+  border-color: var(--primary);
+  box-shadow: var(--focus);
+}
+
+.helper {
+  color: var(--muted);
+  font-size: .7rem;
+}
+
+/* =========================
+   Navbar
+   ========================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  /* mismo color que el body */
+  border-bottom: 1px solid rgba(0, 0, 0, .08);
+  z-index: 10;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand strong {
+  letter-spacing: .3px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: background .2s ease, text-decoration-color .2s ease;
+}
+
+.nav a:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.nav a.active {
+  text-decoration: underline;
+  background: transparent;
+}
+
+/* Botón Logout dentro del navbar: chip sutil (sin glow) */
+.nav .btn {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(0, 0, 0, .35);
+  box-shadow: none;
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.nav .btn:hover {
+  background: rgba(0, 0, 0, .06);
+}
+
+.nav .btn:focus {
+  box-shadow: none;
+}
+
+/* =========================
+   Layouts / secciones
+   ========================= */
+.main {
+  padding: 28px 0;
+}
+
+.hero {
+  display: grid;
+  gap: 16px;
+}
+
+/* =========================
+   Grid reutilizable
+   ========================= */
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+/* =========================
+   Tarjetas de categoría
+   ========================= */
+.category-card {
+  display: block;
+  /* <a> como tarjeta */
+  padding: 22px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: inherit;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, .10);
+}
+
+.category-card h3 {
+  margin: 0 0 6px;
+}
+
+.category-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Ícono decorativo en esquina (opción B) */
+.category-card.has-corner-icon {
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card .corner-icon {
+  display: block;
+  position: absolute;
+  right: 1rem;
+  bottom: 2rem;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--primary);
+  opacity: .15;
+  pointer-events: none;
+}
+
+.product-img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: var(--radius) var(--radius) 0 0;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* =========================
+   Login / Registro
+   ========================= */
+.auth-wrap {
+  min-height: calc(100dvh - 68px);
+  display: grid;
+  place-items: center;
+  padding: 34px 16px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 520px;
+  padding: 28px;
+}
+
+.auth-title {
+  margin: 0 0 8px;
+}
+
+.auth-sub {
+  margin: 0 0 18px;
+  color: var(--muted);
+}
+
+label span {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-row {
+  display: grid;
+  gap: 12px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+/* =========================
+   Badge / chip
+   ========================= */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: .5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, .15);
+  background: rgba(255, 255, 255, .35);
+  color: var(--text);
+  font-size: .92rem;
+}
+
+.chip-dot {
+  width: .6rem;
+  height: .6rem;
+  border-radius: 999px;
+  background: var(--primary);
+}
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+  background: var(--bg);
+  /* mismo color que el body */
+  color: #5b4d54;
+  /* tono legible sobre rosa */
+  font-size: .92rem;
+  padding: 24px 0 40px;
+  text-align: center;
+}

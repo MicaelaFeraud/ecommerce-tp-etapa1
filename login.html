@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mica Store | Login</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.svg" alt="Logo" width="28" height="28"/>
+        <strong>Mica Store</strong>
+      </a>
+      <nav class="nav"><a href="index.html">Home</a></nav>
+    </div>
+  </header>
+  
+    <section class="auth-wrap">
+      <div class="card auth-card">
+        <h1 class="auth-title">Login</h1>
+        <p class="auth-sub">Ingresá con tu email y contraseña.</p>
+        
+    <form id="loginForm" class="form-col">
+      <div class="form-row">
+        
+        <label><span>Email</span><input class="input" type="email" name="email" placeholder="tu@email.com" required></label>
+        <label><span>Contraseña</span><input class="input" type="password" name="password" placeholder="••••••••" required minlength="4"></label>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn">Ingresar</button>
+        <a class="btn link" href="register.html">Crear cuenta</a>
+      </div>
+    </form>
+    
+      </div>
+    </section>
+    <script src="js/auth.js"></script>
+    <script> window.Auth && Auth.bindLogin('loginForm'); document.body.dataset.protect = "false"; </script>
+    
+  <footer>
+    <div class="container">© Mica Store • Hecho para TP (Etapa 1)</div>
+  </footer>
+</body>
+</html>

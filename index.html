@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mica Store | Inicio</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body data-protect="true">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.svg" alt="Logo" width="28" height="28" />
+        <strong>Mica Store</strong>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="">Home</a>
+        <a href="category-electronica.html" class="">Electrónica</a>
+        <a href="category-accesorios.html" class="">Accesorios</a>
+        <a href="category-hogar.html" class="">Hogar & Deco</a>
+        <button id="logoutBtn" class="btn outline">Logout</button>
+      </nav>
+    </div>
+  </header>
+  <script src="js/auth.js"></script>
+  <script>
+    (function () {
+      const here = location.pathname.split('/').pop();
+      document.querySelectorAll('.nav a').forEach(a => {
+        if (a.getAttribute('href') === here) a.classList.add('active');
+      });
+    })();
+  </script>
+
+  <main class="main">
+    <div class="container">
+
+      <section class="hero">
+        <h1 class="auth-title">Mica Store</h1>
+        <p class="auth-sub">E-commerce demo con estilo <strong>soft minimalism</strong>. Navegá por las categorías del
+          navbar.</p>
+        <div class="grid">
+          <a class="category-card has-corner-icon" href="category-electronica.html">
+            <h3>Electrónica</h3>
+            <p>Gadgets y dispositivos.</p>
+            <i class="fa-solid fa-desktop corner-icon" aria-hidden="true"></i>
+          </a>
+
+
+          <a class="category-card has-corner-icon" href="category-accesorios.html">
+            <h3>Accesorios</h3>
+            <p>Complementos y más.</p>
+            <i class="fa-solid fa-headphones corner-icon"></i>
+          </a>
+
+          <a class="category-card has-corner-icon" href="category-hogar.html">
+            <h3>Hogar & Deco</h3>
+            <p>Deco y objetos útiles.</p>
+            <i class="fa-solid fa-paint-roller corner-icon"></i>
+          </a>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+  <footer>
+    <div class="container">© Mica Store • Hecho para TP (Etapa 1)</div>
+  </footer>
+</body>
+
+</html>

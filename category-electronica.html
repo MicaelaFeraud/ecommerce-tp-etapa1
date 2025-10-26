@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mica Store | Categoría: Electrónica</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body data-protect="true">
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.svg" alt="Logo" width="28" height="28" />
+        <strong>Mica Store</strong>
+
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="">Home</a> <a href="category-electronica.html" class="active">Electrónica</a> <a
+          href="category-accesorios.html" class="">Accesorios</a> <a href="category-hogar.html" class="">Hogar &
+          Deco</a> <button id="logoutBtn" class="btn outline">Logout</button>
+      </nav>
+    </div>
+  </header>
+  <script src="js/auth.js"></script>
+  <script>
+    (function () {
+      const here = location.pathname.split('/').pop();
+      document.querySelectorAll('.nav a').forEach(a => {
+        if (a.getAttribute('href') === here) a.classList.add('active');
+      });
+    })();
+  </script>
+
+  <main class="main">
+    <div class="container">
+
+      <section class="hero">
+        <h1 class="auth-title">Mica Store – Electrónica</h1>
+        <p class="auth-sub">Productos de <strong>Electrónica</strong> (contenido de ejemplo).</p>
+        <div class="grid">
+          <div class="card"><strong>Galaxy Z Flip7 FE White 256GB</strong>
+            <img src="assets/images/dispositivo 1.png" alt="smartphone" class="product-img">
+            <p class="helper">Con su forma elegante y tamaño compacto, el Galaxy Z Flip7 FE está diseñado para que sea más fácil de guardar en el bolsillo de manera cómoda.</p>
+            <a class="btn link">Ver más</a>
+          </div>
+          <div class="card"><strong>OPPO A60 Black 256GB+8GB</strong>
+            <img src="assets/images/dispositivo 2.jpg" alt="smartphone" class="product-img">
+            <p class="helper">Redefini la elegancia y la potencia con el Celular Oppo A60 6.7" 256GB+8GB negro Un celular que combina diseño impecable y tecnología avanzada para que vivas cada momento al máximo.</p>
+            <a class="btn link">Ver más</a>
+          </div>
+          <div class="card"><strong>Galaxy A16 5G 256GB</strong>
+            <img src="assets/images/dispositivo 3.jpg" alt="smartphone" class="product-img">
+            <p class="helper">El Samsung Galaxy A16 5G es un smartphone con pantalla Super AMOLED de 6.7 pulgadas y 90Hz, procesador Exynos 1330 o Dimensity 6300, y hasta 8GB de RAM y 256GB de almacenamiento.</p>
+            <a class="btn link">Ver más</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <footer>
+    <div class="container">© Mica Store • Hecho para TP (Etapa 1)</div>
+  </footer>
+</body>
+
+</html>

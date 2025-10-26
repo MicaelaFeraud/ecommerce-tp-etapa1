@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mica Store | Categoría: Hogar & Deco</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-protect="true">
+  
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.svg" alt="Logo" width="28" height="28"/>
+      <strong>Mica Store</strong>
+      
+    </a>
+    <nav class="nav">
+      <a href="index.html" class="">Home</a> <a href="category-electronica.html" class="">Electrónica</a> <a href="category-accesorios.html" class="">Accesorios</a> <a href="category-hogar.html" class="active">Hogar & Deco</a> <button id="logoutBtn" class="btn outline">Logout</button>
+    </nav>
+  </div>
+</header>
+<script src="js/auth.js"></script>
+<script>
+  (function(){ 
+    const here = location.pathname.split('/').pop();
+    document.querySelectorAll('.nav a').forEach(a => {
+      if (a.getAttribute('href') === here) a.classList.add('active');
+    });
+  })();
+</script>
+
+  <main class="main">
+    <div class="container">
+      
+    <section class="hero">
+      <h1 class="auth-title">Mica Store – Hogar & Deco</h1>
+      <p class="auth-sub">Productos de <strong>Hogar & Deco</strong> (contenido de ejemplo).</p>
+      <div class="grid">
+          <div class="card"><strong>Estante de madera para flores</strong>
+            <img src="assets/images/deco 1.jpg" alt="Notebook" class="product-img">
+            <p class="helper">Soporte para plantas de varios niveles, estante para flores de madera para interiores y exteriores al por mayor.</p>
+            <a class="btn link">Ver más</a>
+          </div>
+          <div class="card"><strong>Centros de mesa Halloween</strong>
+            <img src="assets/images/deco 2.jpg" alt="Notebook" class="product-img">
+            <p class="helper">Accesorios de decoraciones de Halloween, con concepto de Jack O Lanterns</p>
+            <a class="btn link">Ver más</a>
+          </div>
+          <div class="card"><strong>Mini Maceta Suculentas Artificiales, 16 Unidades</strong>
+            <img src="assets/images/deco 3.jpg" alt="Notebook" class="product-img">
+            <p class="helper">El adorno micropaisajístico es realista, está hecho de material de primera calidad y es práctico de usar. La apariencia creativa del modelo de bonsái brinda una experiencia de decoración cómoda.</p>
+            <a class="btn link">Ver más</a>
+          </div>
+        </div>
+    </section>
+    
+    </div>
+  </main>
+  <footer>
+    <div class="container">© Mica Store • Hecho para TP (Etapa 1)</div>
+  </footer>
+</body>
+</html>

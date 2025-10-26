@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mica Store | Registro</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.svg" alt="Logo" width="28" height="28"/>
+        <strong>Mica Store</strong>
+      </a>
+      <nav class="nav"><a href="index.html">Home</a></nav>
+    </div>
+  </header>
+  
+    <section class="auth-wrap">
+      <div class="card auth-card">
+        <h1 class="auth-title">Registro</h1>
+        <p class="auth-sub">Completá los datos para registrarte.</p>
+        
+    <form id="registerForm" class="form-col">
+      <div class="form-row">
+        <label><span>Nombre</span><input class="input" type="text" name="name" placeholder="Tu nombre" required></label>
+        <label><span>Email</span><input class="input" type="email" name="email" placeholder="tu@email.com" required></label>
+        <label><span>Contraseña</span><input class="input" type="password" name="password" placeholder="••••••••" required minlength="4"></label>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn">Crear cuenta</button>
+        <a class="btn link" href="login.html">Ya tengo cuenta</a>
+      </div>
+    </form>
+    
+      </div>
+    </section>
+    <script src="js/auth.js"></script>
+    <script> window.Auth && Auth.bindRegister('registerForm'); document.body.dataset.protect = "false"; </script>
+    
+  <footer>
+    <div class="container">© Mica Store • Hecho para TP (Etapa 1)</div>
+  </footer>
+</body>
+</html>
