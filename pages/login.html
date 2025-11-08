@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mica Store | Login</title>
+  <link rel="icon" href="../assets/logo.svg">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="brand">
+        <img src="../assets/logo.svg" alt="Logo" width="28" height="28"/>
+        <strong>Mica Store</strong>
+      </a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="category-electronica.html">Electrónica</a>
+        <a href="category-accesorios.html">Accesorios</a>
+        <a href="category-hogar.html">Hogar & Deco</a>
+        <a href="login.html" class="active">Login</a>
+        <a href="register.html">Registro</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container auth-wrap">
+      <div class="card auth-card">
+        <h1 class="auth-title">Iniciar sesión</h1>
+        <p class="auth-sub">Ingresá con tu correo y contraseña para continuar.</p>
+
+        <form class="form" id="loginForm">
+          <div class="form-row">
+            <label>
+              <span>Email</span>
+              <input class="input" type="email" name="email" required>
+            </label>
+            <label>
+              <span>Contraseña</span>
+              <input class="input" type="password" name="password" required>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">Entrar</button>
+            <a class="btn link" href="register.html">Crear cuenta</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">© Mica Store • Hecho para TP (Etapa 1)</div>
+  </footer>
+
+</body>
+</html>
