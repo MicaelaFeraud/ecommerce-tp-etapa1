@@ -7,62 +7,18 @@
   <link rel="icon" href="../assets/logo.svg">
   <link rel="stylesheet" href="../assets/style.css">
 </head>
-<body>
+<body data-protect="true">
 
-<header class="navbar">
-  <div class="container navbar-inner">
-    <a href="../index.html" class="brand">
-      <img src="../assets/logo.svg" alt="Logo" width="28" height="28"/>
-      <strong>Mica Store</strong>
-    </a>
-    <nav class="nav">
-      <a href="../index.html">Home</a>
-      <a href="category-electronica.html">Electrónica</a>
-      <a href="category-accesorios.html">Accesorios</a>
-      <a href="category-hogar.html" class="active">Hogar & Deco</a>
-      <a href="login.html">Login</a>
-      <a href="register.html">Registro</a>
-    </nav>
-  </div>
-</header>
+<div id="navbar-root"></div>
 
 <main class="main">
   <div class="container">
 
     <section class="hero">
       <h1 class="auth-title">Mica Store – Hogar & Deco</h1>
-      <p class="auth-sub">Productos de <strong>Hogar & Deco</strong> (contenido de ejemplo).</p>
+      <p class="auth-sub">Productos de <strong>Hogar & Deco</strong></p>
 
-      <div class="grid">
-
-        <div class="card">
-          <strong>Lámpara de escritorio LED</strong>
-          <img src="../assets/images/deco 1.jpg" alt="lámpara" class="product-img">
-          <p class="helper">
-            Iluminación regulable, diseño minimalista y bajo consumo para acompañar tu espacio de trabajo.
-          </p>
-          <a class="btn link">Ver más</a>
-        </div>
-
-        <div class="card">
-          <strong>Set de velas aromáticas</strong>
-          <img src="../assets/images/deco 2.jpg" alt="velas" class="product-img">
-          <p class="helper">
-            Aromas suaves para crear ambientes cálidos y relajantes en tu hogar.
-          </p>
-          <a class="btn link">Ver más</a>
-        </div>
-
-        <div class="card">
-          <strong>Mini jardín decorativo</strong>
-          <img src="../assets/images/deco 3.jpg" alt="decoración" class="product-img">
-          <p class="helper">
-            Adorno micropaisajístico ideal para escritorios, estantes o mesas de luz.
-          </p>
-          <a class="btn link">Ver más</a>
-        </div>
-
-      </div>
+      <div class="grid" id="products-grid"></div>
     </section>
 
   </div>
@@ -71,6 +27,21 @@
 <footer>
   <div class="container">© Mica Store • Hecho para TP (Etapa 1)</div>
 </footer>
+
+
+  <script src="../js/auth.js"></script>
+  <script src="../js/routes.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/cards.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.Cards && window.PRODUCTS) {
+        window.Cards.renderCategory("products-grid", "hogar");
+      }
+    });
+  </script>
 
 </body>
 </html>

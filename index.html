@@ -11,24 +11,9 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body>
+<body data-protect="true">
 
-  <header class="navbar">
-    <div class="container navbar-inner">
-      <a href="index.html" class="brand">
-        <img src="assets/logo.svg" alt="Logo" width="28" height="28" />
-        <strong>Mica Store</strong>
-      </a>
-      <nav class="nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="pages/category-electronica.html">Electrónica</a>
-        <a href="pages/category-accesorios.html">Accesorios</a>
-        <a href="pages/category-hogar.html">Hogar & Deco</a>
-        <a href="pages/login.html">Login</a>
-        <a href="pages/register.html">Registro</a>
-      </nav>
-    </div>
-  </header>
+  <div id="navbar-root"></div>
 
   <main class="main">
     <div class="container">
@@ -63,11 +48,20 @@
       </section>
 
     </div>
+    <section id="products" class="products-grid"></section>
   </main>
 
   <footer>
     <div class="container">© Mica Store • Hecho para TP (Etapa 1)</div>
   </footer>
+
+
+  <script src="js/auth.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cards.js"></script>
+  
 
 </body>
 </html>

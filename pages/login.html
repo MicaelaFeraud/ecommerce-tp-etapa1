@@ -57,5 +57,15 @@
     <div class="container">© Mica Store • Hecho para TP (Etapa 1)</div>
   </footer>
 
+
+  <script src="../js/auth.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.Auth && typeof window.Auth.bindLogin === "function") {
+        window.Auth.bindLogin("loginForm");
+      }
+    });
+  </script>
+
 </body>
 </html>

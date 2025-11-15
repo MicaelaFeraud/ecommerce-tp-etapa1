@@ -366,3 +366,35 @@ footer {
   padding: 24px 0 40px;
   text-align: center;
 }
+
+.product-price {
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.qty-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+  justify-content: right;
+
+}
+
+.qty-btn {
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.qty-input {
+  width: 3rem;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  padding: 0.15rem 0.25rem;
+  cursor: default;
+}
