@@ -35,6 +35,50 @@ Esta paleta busca transmitir una estética **suave y moderna**, manteniendo buen
 - Se añadió soporte para **iconos de Font Awesome**.
 - El diseño es **responsivo**, adaptándose a distintos anchos de pantalla.
 
+## ✅ Novedades de la Etapa 3
+
+### 1. Sistema de Login y Registro (localStorage)
+
+- Los usuarios se guardan en `localStorage`.
+- Validaciones básicas:
+  - email único  
+  - password requerido  
+- Al iniciar sesión, se guarda `currentUser`.
+- Al registrarse, el usuario inicia sesión automáticamente.
+
+### 2. Navbar dinámico con estado de usuario
+
+- El navbar se genera desde: `js/navbar.js`
+- Funciones principales:
+
+    - Render dinámico según si hay usuario logueado.
+    - Muestra el nombre del usuario actual.
+    - Incluye el botón Cerrar sesión.
+    - Es reutilizable en todas las páginas mediante:
+
+```html
+<div id="navbar-root"></div>
+```
+
+### 3. Componente reutilizable de Tarjetas (Cards)
+
+Ubicado en: `js/cards.js`
+
+- Funcionalidades:
+
+Render dinámico de productos.
+- Cada tarjeta muestra:
+    - imagen del producto
+    - nombre
+    - descripción
+    - precio
+    - selector de cantidad (+ / –)
+
+Este componente se utiliza tanto en las páginas de categoría como en el home.
+
+Se integra con: `js/products.js`
+(donde está la base de datos local de productos)
+
 ### 🚀 Cómo probar
 1. Abrí el proyecto con **Live Server** (VS Code) o abrí `index.html` en tu navegador.
 2. Navegá las páginas desde el **navbar** para ver la coherencia de estilos.
