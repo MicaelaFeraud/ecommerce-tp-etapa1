@@ -50,7 +50,9 @@
 
     root.innerHTML = "";
     root.appendChild(header);
-    // El botón de logout lo engancha Auth.bindLogout() por id="logoutBtn"
+    if (window.Auth && typeof window.Auth.bindLogout === "function") {
+      window.Auth.bindLogout();
+    }
   }
 
   document.addEventListener("DOMContentLoaded", renderNavbar);

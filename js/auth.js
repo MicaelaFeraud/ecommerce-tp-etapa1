@@ -86,7 +86,7 @@
   function logout() { clearUser(); goLogin(); }
   function isLoggedIn() { return !!getUser(); }
 
-  window.Auth = { bindLogin, bindRegister, logout, isLoggedIn, protect, goLogin, goHome };
+  window.Auth = { bindLogin, bindRegister, logout, isLoggedIn, protect, goLogin, bindLogout, goHome };
 
   bindLogout();
   protect();
