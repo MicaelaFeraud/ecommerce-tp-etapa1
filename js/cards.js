@@ -59,7 +59,6 @@
           price.className = "product-price";
           var value = Number(product.price || 0);
           price.textContent = "$ " + value.toLocaleString("es-AR");
-          card.appendChild(price);
 
           // Controles de cantidad
           var qtyWrapper = document.createElement("div");
@@ -95,13 +94,21 @@
           qtyWrapper.appendChild(minusBtn);
           qtyWrapper.appendChild(qtyInput);
           qtyWrapper.appendChild(plusBtn);
-          card.appendChild(qtyWrapper);
+
+          // ⬇️ Nuevo contenedor horizontal: precio + cantidad
+          var priceQty = document.createElement("div");
+          priceQty.className = "price-qty-row";
+          priceQty.appendChild(price);
+          priceQty.appendChild(qtyWrapper);
+
+          card.appendChild(priceQty);
 
           // Botón "Añadir al carrito"
           var addBtn = document.createElement("button");
           addBtn.type = "button";
-          addBtn.className = "btn";
-          addBtn.textContent = "Añadir al carrito";
+          addBtn.className = "btn ";
+          addBtn.innerHTML = `<i class="fa-solid fa-cart-plus cart-icon"></i> Añadir al carrito`;
+
 
           addBtn.addEventListener("click", function () {
             var quantity = parseInt(qtyInput.value, 10) || 0;
@@ -128,7 +135,7 @@
 
           card.appendChild(addBtn);
 
-          // Botón "Ver más" (opcional, link vacío)
+          // Botón "Ver más"
           var link = document.createElement("a");
           link.className = "btn link";
           link.textContent = "Ver más";
