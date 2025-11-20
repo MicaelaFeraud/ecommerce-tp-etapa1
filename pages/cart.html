@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mica Store | Carrito</title>
+  <link rel="icon" href="../assets/logo.svg">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body data-protect="true">
+
+  <div id="navbar-root"></div>
+
+  <main class="main">
+    <div class="container">
+      <section class="hero">
+        <h1 class="auth-title">Carrito de compras</h1>
+        <p class="auth-sub">Revisá los productos que añadiste al carrito.</p>
+      </section>
+
+      <section id="cart-section">
+        <p id="cart-empty" class="helper">
+          Todavía no agregaste productos al carrito.
+        </p>
+
+        <div id="cart-items" class="grid"></div>
+
+        <div id="cart-summary" style="margin-top: 1rem;">
+          <p id="cart-total" class="product-price"></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">© Mica Store • Hecho para TP (Etapas 4 y 5)</div>
+  </footer>
+
+  <script src="../js/auth.js"></script>
+  <script src="../js/routes.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/cart.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!window.Cart) return;
+
+      var listEl = document.getElementById("cart-items");
+      var emptyEl = document.getElementById("cart-empty");
+      var totalEl = document.getElementById("cart-total");
+
+      function render() {
+        var cart = window.Cart.getCart();
+
+        if (!cart.length) {
+          emptyEl.style.display = "block";
+          listEl.innerHTML = "";
+          totalEl.textContent = "";
+          return;
+        }
+
+        emptyEl.style.display = "none";
+        listEl.innerHTML = "";
+
+        cart.forEach(function (item, index) {
+          var row = document.createElement("article");
+          row.className = "card";
+
+          row.innerHTML = `
+            <div class="cart-item-main" style="display:flex; gap:12px; align-items:flex-start;">
+              <img src="${item.image}" alt="${item.title}" style="width:80px; height:auto; border-radius:8px; object-fit:cover;">
+              <div class="cart-item-info">
+                <h3>${item.title}</h3>
+                <p class="helper">${item.description || ""}</p>
+                <p class="product-price">$ ${Number(item.price || 0).toLocaleString("es-AR")}</p>
+                <p class="helper">Cantidad: <strong>${item.quantity}</strong></p>
+              </div>
+            </div>
+            <button type="button" class="btn link cart-remove" data-index="${index}">Eliminar</button>
+          `;
+
+          listEl.appendChild(row);
+        });
+
+        var total = window.Cart.getTotal();
+        totalEl.textContent = "Total: $ " + total.toLocaleString("es-AR");
+      }
+
+      listEl.addEventListener("click", function (e) {
+        if (e.target.classList.contains("cart-remove")) {
+          var idx = parseInt(e.target.getAttribute("data-index"), 10);
+          window.Cart.removeItemByIndex(idx);
+          render();
+        }
+      });
+
+      render();
+    });
+  </script>
+
+</body>
+
+</html>

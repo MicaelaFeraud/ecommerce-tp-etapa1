@@ -1,0 +1,62 @@
+{
+  "electronica": [
+    {
+      "title": "Galaxy Z Flip7 FE White 256GB",
+      "image": "../assets/images/dispositivo 1.png",
+      "description": "Con su forma elegante y tamaño compacto, el ...que sea más fácil ... guardar en el bolsillo de manera cómoda.",
+      "price": 899999
+    },
+    {
+      "title": "OPPO A60 Black 256GB+8GB",
+      "image": "../assets/images/dispositivo 2.jpg",
+      "description": "Redefiní la elegancia y la potencia con el C.... y tecnología avanzada para que vivas cada momento al máximo.",
+      "price": 399999
+    },
+    {
+      "title": "Galaxy S24 Ultra Titanium Violet 256GB",
+      "image": "../assets/images/dispositivo 3.jpg",
+      "description": "Lleva tu experiencia móvil al siguiente nivel. ... cámara profesional y un diseño en color violeta titanio que combina elegancia y resistencia.",
+      "price": 1229999
+    }
+  ],
+  "accesorios": [
+    {
+      "title": "Auriculares inalámbricos",
+      "image": "../assets/images/accesorio 1.png",
+      "description": "Sonido envolvente, cancelación de ruido y estuche compacto para llevar a todos lados.",
+      "price": 25999
+    },
+    {
+      "title": "Jbl Go 3: Portable Speaker With Bluetooth",
+      "image": "../assets/images/accesorio 2.jpg",
+      "description": "Los parlantes JBL son conocidos por su alta ...onido, que incluye desde graves potentes hasta agudos nítidos.",
+      "price": 18999
+    },
+    {
+      "title": "Smartwatch deportivo",
+      "image": "../assets/images/accesorio 3.png",
+      "description": "Resistente al agua, con monitoreo de actividad, notificaciones y correa cómoda para uso diario.",
+      "price": 45999
+    }
+  ],
+  "hogar": [
+    {
+      "title": "Estante de madera para flores",
+      "image": "../assets/images/deco 1.jpg",
+      "description": "Soporte para plantas de varios niveles, esta...ra flores de madera para interiores y exteriores al por mayor.",
+      "price": 14999
+    },
+    {
+      "title": "Centros de mesa Halloween",
+      "image": "../assets/images/deco 2.jpg",
+      "description": "Accesorios de decoraciones de Halloween, con concepto de Jack O Lanterns",
+      "price": 9999
+    },
+    {
+      "title": "Mini Maceta Suculentas Artificiales, 16 Unidades",
+      "image": "../assets/images/deco 3.jpg",
+      "description": "El adorno micropaisajístico es realista, est... modelo de bonsái brinda una experiencia de decoración cómoda.",
+      "price": 12999
+    }
+  ]
+}

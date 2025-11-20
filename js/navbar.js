@@ -5,7 +5,8 @@
     { slug: "", label: "Inicio" },
     { slug: "category-electronica.html", label: "Electrónica" },
     { slug: "category-accesorios.html", label: "Accesorios" },
-    { slug: "category-hogar.html", label: "Hogar & Deco" }
+    { slug: "category-hogar.html", label: "Hogar & Deco" },
+    { slug: "cart.html", label: "Carrito" }
   ];
 
   function isInPages() {

@@ -13,19 +13,19 @@
 
 <main class="main">
   <div class="container">
-
     <section class="hero">
       <h1 class="auth-title">Mica Store – Hogar & Deco</h1>
       <p class="auth-sub">Productos de <strong>Hogar & Deco</strong></p>
-
-      <div class="grid" id="products-grid"></div>
     </section>
 
+    <section>
+      <div class="grid" id="products-grid"></div>
+    </section>
   </div>
 </main>
 
 <footer>
-  <div class="container">© Mica Store • Hecho para TP (Etapa 1)</div>
+  <div class="container">© Mica Store • Hecho para TP</div>
 </footer>
 
 
@@ -33,11 +33,12 @@
   <script src="../js/routes.js"></script>
   <script src="../js/navbar.js"></script>
   <script src="../js/products.js"></script>
+  <script src="../js/cart.js"></script>
   <script src="../js/cards.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      if (window.Cards && window.PRODUCTS) {
+      if (window.Cards) {
         window.Cards.renderCategory("products-grid", "hogar");
       }
     });
